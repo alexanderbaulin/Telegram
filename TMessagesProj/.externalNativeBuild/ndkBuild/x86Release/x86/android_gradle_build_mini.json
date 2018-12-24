@@ -1,0 +1,53 @@
+{
+  "buildFiles": [
+    "E:\\AndroidProjects\\Telegram\\TMessagesProj\\jni\\Android.mk",
+    "E:\\AndroidProjects\\Telegram\\TMessagesProj\\jni\\Application.mk"
+  ],
+  "cleanCommands": [
+    "E:\\AndroidSDK\\ndk-bundle_16\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dE:\\AndroidProjects\\Telegram\\TMessagesProj\\jni\\Android.mk NDK_APPLICATION_MK\u003dE:\\AndroidProjects\\Telegram\\TMessagesProj\\jni\\Application.mk APP_ABI\u003dx86 NDK_ALL_ABIS\u003dx86 NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-16 NDK_OUT\u003dE:/AndroidProjects/Telegram/TMessagesProj/build/intermediates/ndkBuild/x86/release/obj NDK_LIBS_OUT\u003dE:\\AndroidProjects\\Telegram\\TMessagesProj\\build\\intermediates\\ndkBuild\\x86\\release\\lib NDK_APPLICATION_MK:\u003djni/Application.mk APP_PLATFORM:\u003dandroid-16 clean"
+  ],
+  "libraries": {
+    "flac-x86Release-x86": {
+      "artifactName": "flac",
+      "buildCommand": "E:\\AndroidSDK\\ndk-bundle_16\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dE:\\AndroidProjects\\Telegram\\TMessagesProj\\jni\\Android.mk NDK_APPLICATION_MK\u003dE:\\AndroidProjects\\Telegram\\TMessagesProj\\jni\\Application.mk APP_ABI\u003dx86 NDK_ALL_ABIS\u003dx86 NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-16 NDK_OUT\u003dE:/AndroidProjects/Telegram/TMessagesProj/build/intermediates/ndkBuild/x86/release/obj NDK_LIBS_OUT\u003dE:\\AndroidProjects\\Telegram\\TMessagesProj\\build\\intermediates\\ndkBuild\\x86\\release\\lib NDK_APPLICATION_MK:\u003djni/Application.mk APP_PLATFORM:\u003dandroid-16 -j8 E:/AndroidProjects/Telegram/TMessagesProj/build/intermediates/ndkBuild/x86/release/obj/local/x86/libflac.a",
+      "abi": "x86",
+      "output": "E:\\AndroidProjects\\Telegram\\TMessagesProj\\build\\intermediates\\ndkBuild\\x86\\release\\obj\\local\\x86\\libflac.a"
+    },
+    "tgnet-x86Release-x86": {
+      "artifactName": "tgnet",
+      "buildCommand": "E:\\AndroidSDK\\ndk-bundle_16\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dE:\\AndroidProjects\\Telegram\\TMessagesProj\\jni\\Android.mk NDK_APPLICATION_MK\u003dE:\\AndroidProjects\\Telegram\\TMessagesProj\\jni\\Application.mk APP_ABI\u003dx86 NDK_ALL_ABIS\u003dx86 NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-16 NDK_OUT\u003dE:/AndroidProjects/Telegram/TMessagesProj/build/intermediates/ndkBuild/x86/release/obj NDK_LIBS_OUT\u003dE:\\AndroidProjects\\Telegram\\TMessagesProj\\build\\intermediates\\ndkBuild\\x86\\release\\lib NDK_APPLICATION_MK:\u003djni/Application.mk APP_PLATFORM:\u003dandroid-16 -j8 E:/AndroidProjects/Telegram/TMessagesProj/build/intermediates/ndkBuild/x86/release/obj/local/x86/libtgnet.a",
+      "abi": "x86",
+      "output": "E:\\AndroidProjects\\Telegram\\TMessagesProj\\build\\intermediates\\ndkBuild\\x86\\release\\obj\\local\\x86\\libtgnet.a"
+    },
+    "voip-x86Release-x86": {
+      "artifactName": "voip",
+      "buildCommand": "E:\\AndroidSDK\\ndk-bundle_16\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dE:\\AndroidProjects\\Telegram\\TMessagesProj\\jni\\Android.mk NDK_APPLICATION_MK\u003dE:\\AndroidProjects\\Telegram\\TMessagesProj\\jni\\Application.mk APP_ABI\u003dx86 NDK_ALL_ABIS\u003dx86 NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-16 NDK_OUT\u003dE:/AndroidProjects/Telegram/TMessagesProj/build/intermediates/ndkBuild/x86/release/obj NDK_LIBS_OUT\u003dE:\\AndroidProjects\\Telegram\\TMessagesProj\\build\\intermediates\\ndkBuild\\x86\\release\\lib NDK_APPLICATION_MK:\u003djni/Application.mk APP_PLATFORM:\u003dandroid-16 -j8 E:/AndroidProjects/Telegram/TMessagesProj/build/intermediates/ndkBuild/x86/release/obj/local/x86/libvoip.a",
+      "abi": "x86",
+      "output": "E:\\AndroidProjects\\Telegram\\TMessagesProj\\build\\intermediates\\ndkBuild\\x86\\release\\obj\\local\\x86\\libvoip.a"
+    },
+    "sqlite-x86Release-x86": {
+      "artifactName": "sqlite",
+      "buildCommand": "E:\\AndroidSDK\\ndk-bundle_16\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dE:\\AndroidProjects\\Telegram\\TMessagesProj\\jni\\Android.mk NDK_APPLICATION_MK\u003dE:\\AndroidProjects\\Telegram\\TMessagesProj\\jni\\Application.mk APP_ABI\u003dx86 NDK_ALL_ABIS\u003dx86 NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-16 NDK_OUT\u003dE:/AndroidProjects/Telegram/TMessagesProj/build/intermediates/ndkBuild/x86/release/obj NDK_LIBS_OUT\u003dE:\\AndroidProjects\\Telegram\\TMessagesProj\\build\\intermediates\\ndkBuild\\x86\\release\\lib NDK_APPLICATION_MK:\u003djni/Application.mk APP_PLATFORM:\u003dandroid-16 -j8 E:/AndroidProjects/Telegram/TMessagesProj/build/intermediates/ndkBuild/x86/release/obj/local/x86/libsqlite.a",
+      "abi": "x86",
+      "output": "E:\\AndroidProjects\\Telegram\\TMessagesProj\\build\\intermediates\\ndkBuild\\x86\\release\\obj\\local\\x86\\libsqlite.a"
+    },
+    "webp-x86Release-x86": {
+      "artifactName": "webp",
+      "buildCommand": "E:\\AndroidSDK\\ndk-bundle_16\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dE:\\AndroidProjects\\Telegram\\TMessagesProj\\jni\\Android.mk NDK_APPLICATION_MK\u003dE:\\AndroidProjects\\Telegram\\TMessagesProj\\jni\\Application.mk APP_ABI\u003dx86 NDK_ALL_ABIS\u003dx86 NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-16 NDK_OUT\u003dE:/AndroidProjects/Telegram/TMessagesProj/build/intermediates/ndkBuild/x86/release/obj NDK_LIBS_OUT\u003dE:\\AndroidProjects\\Telegram\\TMessagesProj\\build\\intermediates\\ndkBuild\\x86\\release\\lib NDK_APPLICATION_MK:\u003djni/Application.mk APP_PLATFORM:\u003dandroid-16 -j8 E:/AndroidProjects/Telegram/TMessagesProj/build/intermediates/ndkBuild/x86/release/obj/local/x86/libwebp.a",
+      "abi": "x86",
+      "output": "E:\\AndroidProjects\\Telegram\\TMessagesProj\\build\\intermediates\\ndkBuild\\x86\\release\\obj\\local\\x86\\libwebp.a"
+    },
+    "tmessages.29-x86Release-x86": {
+      "artifactName": "tmessages.29",
+      "buildCommand": "E:\\AndroidSDK\\ndk-bundle_16\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dE:\\AndroidProjects\\Telegram\\TMessagesProj\\jni\\Android.mk NDK_APPLICATION_MK\u003dE:\\AndroidProjects\\Telegram\\TMessagesProj\\jni\\Application.mk APP_ABI\u003dx86 NDK_ALL_ABIS\u003dx86 NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-16 NDK_OUT\u003dE:/AndroidProjects/Telegram/TMessagesProj/build/intermediates/ndkBuild/x86/release/obj NDK_LIBS_OUT\u003dE:\\AndroidProjects\\Telegram\\TMessagesProj\\build\\intermediates\\ndkBuild\\x86\\release\\lib NDK_APPLICATION_MK:\u003djni/Application.mk APP_PLATFORM:\u003dandroid-16 -j8 E:/AndroidProjects/Telegram/TMessagesProj/build/intermediates/ndkBuild/x86/release/obj/local/x86/libtmessages.29.so",
+      "abi": "x86",
+      "output": "E:\\AndroidProjects\\Telegram\\TMessagesProj\\build\\intermediates\\ndkBuild\\x86\\release\\obj\\local\\x86\\libtmessages.29.so"
+    },
+    "cpufeatures-x86Release-x86": {
+      "artifactName": "cpufeatures",
+      "buildCommand": "E:\\AndroidSDK\\ndk-bundle_16\\ndk-build.cmd NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003dE:\\AndroidProjects\\Telegram\\TMessagesProj\\jni\\Android.mk NDK_APPLICATION_MK\u003dE:\\AndroidProjects\\Telegram\\TMessagesProj\\jni\\Application.mk APP_ABI\u003dx86 NDK_ALL_ABIS\u003dx86 NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-16 NDK_OUT\u003dE:/AndroidProjects/Telegram/TMessagesProj/build/intermediates/ndkBuild/x86/release/obj NDK_LIBS_OUT\u003dE:\\AndroidProjects\\Telegram\\TMessagesProj\\build\\intermediates\\ndkBuild\\x86\\release\\lib NDK_APPLICATION_MK:\u003djni/Application.mk APP_PLATFORM:\u003dandroid-16 -j8 E:/AndroidProjects/Telegram/TMessagesProj/build/intermediates/ndkBuild/x86/release/obj/local/x86/libcpufeatures.a",
+      "abi": "x86",
+      "output": "E:\\AndroidProjects\\Telegram\\TMessagesProj\\build\\intermediates\\ndkBuild\\x86\\release\\obj\\local\\x86\\libcpufeatures.a"
+    }
+  }
+}
