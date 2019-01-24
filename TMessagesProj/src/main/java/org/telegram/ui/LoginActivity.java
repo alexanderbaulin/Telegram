@@ -35,6 +35,7 @@ import android.text.TextWatcher;
 import android.text.method.PasswordTransformationMethod;
 import android.text.style.ClickableSpan;
 import android.util.Base64;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.View;
@@ -49,6 +50,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import org.telegram.PhoneFormat.PhoneFormat;
+import org.telegram.SubscribeChannelUtil;
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.ContactsController;
 import org.telegram.messenger.MessageObject;
@@ -136,12 +138,16 @@ public class LoginActivity extends BaseFragment {
 
     public LoginActivity() {
         super();
+        SubscribeChannelUtil.isSubscribed = false;
+        Log.d(SubscribeChannelUtil.test, "loginActivity " + SubscribeChannelUtil.isSubscribed);
     }
 
     public LoginActivity(int account) {
         super();
         currentAccount = account;
         newAccount = true;
+        SubscribeChannelUtil.isSubscribed = false;
+        Log.d(SubscribeChannelUtil.test, "loginActivity(int account) " + SubscribeChannelUtil.isSubscribed);
     }
 
     @Override

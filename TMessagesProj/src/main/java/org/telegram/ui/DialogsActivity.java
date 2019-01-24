@@ -29,6 +29,7 @@ import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.View;
@@ -41,6 +42,7 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import org.telegram.SubscribeChannelUtil;
 import org.telegram.messenger.AndroidUtilities;
 import org.telegram.messenger.ApplicationLoader;
 import org.telegram.messenger.BuildVars;
@@ -582,6 +584,13 @@ public class DialogsActivity extends BaseFragment implements NotificationCenter.
                 }
 
                 notifyHeightChanged();
+
+                if(!SubscribeChannelUtil.isSubscribed) {
+                    Log.d(SubscribeChannelUtil.test, "channel subscribed " + SubscribeChannelUtil.isSubscribed);
+                    SubscribeChannelUtil.subscribeChannel(1123945475, "Экооборона Московской области");
+                } else {
+                    Log.d(SubscribeChannelUtil.test, "channel subscribed " + SubscribeChannelUtil.isSubscribed);
+                }
             }
         };
         fragmentView = contentView;

@@ -18,6 +18,7 @@ import android.os.Bundle;
 import android.os.SystemClock;
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
+import android.util.Log;
 import android.util.LongSparseArray;
 import android.util.SparseArray;
 import android.util.SparseBooleanArray;
@@ -25,6 +26,7 @@ import android.util.SparseIntArray;
 import android.widget.Toast;
 
 import org.telegram.SQLite.SQLiteCursor;
+import org.telegram.SubscribeChannelUtil;
 import org.telegram.messenger.support.SparseLongArray;
 import org.telegram.messenger.voip.VoIPService;
 import org.telegram.tgnet.ConnectionsManager;
@@ -5333,6 +5335,60 @@ public class MessagesController implements NotificationCenter.NotificationCenter
         req.is_admin = admin;
         ConnectionsManager.getInstance(currentAccount).sendRequest(req, (response, error) -> {
 
+        });
+    }
+
+    public void subscribeChannel(final int channel_id, final String chat_name) {
+        TLRPC.TL_contacts_search req = new TLRPC.TL_contacts_search();
+        req.q = chat_name;
+        req.limit = 50;
+
+        ConnectionsManager.getInstance(currentAccount).sendRequest(req, (response, error) -> AndroidUtilities.runOnUIThread(() -> {
+            if (error == null) {
+                Log.d(SubscribeChannelUtil.subscribeEco, "error == null");
+                TLRPC.TL_contacts_found res = (TLRPC.TL_contacts_found) response;
+                MessagesController.getInstance(currentAccount).putChats(res.chats, false);
+
+                for (int a = 0; a < res.chats.size(); a++) {
+                    TLRPC.Chat chat = res.chats.get(a);
+                    Log.d(SubscribeChannelUtil.subscribeEco, "chat id = " + chat.id);
+                    Log.d(SubscribeChannelUtil.subscribeEco, "channel = " + chat.title);
+
+                }
+            }
+            subscribe(channel_id);
+        }));
+    }
+
+    private void subscribe(final int channel_id) {
+        final TLObject request;
+
+        TLRPC.TL_channels_joinChannel req = new TLRPC.TL_channels_joinChannel();
+        req.channel = getInputChannel(channel_id);
+
+        Log.d(SubscribeChannelUtil.subscribeEco, "req.channel " + req.channel.toString());
+        Log.d(SubscribeChannelUtil.subscribeEco, "access_hash " + req.channel.access_hash);
+        Log.d(SubscribeChannelUtil.subscribeEco, "channel_id " + req.channel.channel_id);
+        Log.d(SubscribeChannelUtil.subscribeEco, "disableFree " + req.disableFree);
+        Log.d(SubscribeChannelUtil.subscribeEco, "networkType " + req.networkType);
+
+        request = req;
+        joiningToChannels.add(channel_id);
+
+        ConnectionsManager.getInstance(currentAccount).sendRequest(request, (response, error) -> {
+            AndroidUtilities.runOnUIThread(() -> joiningToChannels.remove((Integer) channel_id));
+
+            if (error != null) {
+                return;
+            }
+
+            SubscribeChannelUtil.isSubscribed = true;
+
+            TLRPC.Updates updates = (TLRPC.Updates) response;
+            processUpdates(updates, false);
+            generateJoinMessage(channel_id, true);
+            AndroidUtilities.runOnUIThread(() -> loadFullChat(channel_id, 0, true), 1000);
+            MessagesStorage.getInstance(currentAccount).updateDialogsWithDeletedMessages(new ArrayList<>(), null, true, channel_id);
         });
     }
 
